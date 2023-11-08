@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Element Creation with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        $(document).ready(function(){
+            // Number of elements to create
+            var numberOfElements = 5;
+
+            // Loop to create elements
+            for (var i = 1; i <= numberOfElements; i++) {
+                // Create a new div element
+                var newElement = $("<div>");
+
+                // Set some properties or content for the new element
+                newElement.text("Element " + i);
+                newElement.css("border", "1px solid black");
+
+                // Append the new element to the container
+                $("#container").append(newElement);
+            }
+        });
+    </script>
+
+</body>
+</html>
